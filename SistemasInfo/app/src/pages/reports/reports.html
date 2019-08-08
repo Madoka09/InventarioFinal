@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar transparent>
+    <ion-title>Generar Reportes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="text-align: center">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="clipboard" item-start></ion-icon>
+        <ion-label>Reporte de Stock</ion-label>
+      </ion-item>
+      <button ion-button round icon-start (click)="callStock()">
+        <ion-icon name="cube"></ion-icon>
+        Generar Reporte
+      </button>
+      <button ion-button round icon-start color="secondary" (click)="generatePDFStock()" [disabled]="!pdfObjS">
+        <ion-icon name="print"></ion-icon>
+        Imprimir Reporte
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="calendar" item-start></ion-icon>
+        <ion-label>Reporte de Salidas</ion-label>
+      </ion-item>
+      <button ion-button round icon-start (click)="callDeparture()">
+        <ion-icon name="cube"></ion-icon>
+        Generar Reporte
+      </button>
+      <button ion-button round icon-start color="secondary" (click)="generatePDFDeparture()" [disabled]="!pdfObjD">
+        <ion-icon name="print"></ion-icon>
+        Imprimir Reporte
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-header>
+        Estado de Salidas
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

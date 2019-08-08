@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar transparent>
+    <ion-title>Escanear Codigo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="text-align: center">
+
+  <ion-card *ngIf="scannedCode">
+    <ion-card-content>
+      <ion-card-header><h1>¡Codigo Escaneado!</h1></ion-card-header>
+      <ion-card>
+        <ion-card-header>
+          <h2 style="text-align: center; font-size-adjust: inherit"><b>Información del Codigo</b></h2>
+        </ion-card-header>
+        <ion-card-content>
+          <h2 *ngFor="let element of qrResultString">Nombre: <i ion-text>{{element.nombre | json}}</i></h2>
+          <h2 *ngFor="let element of qrResultString">Descripcion: <i ion-text>{{element.descripcion | json}}</i></h2>
+          <h2 *ngFor="let element of qrResultString">Codigo: <i ion-text>{{element.codigo | json}}</i></h2>
+        </ion-card-content>
+      </ion-card>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <h2 style="text-align: center; font-size-adjust: inherit"><b>Ubicación</b></h2>
+        </ion-card-header>
+        <ion-card-content>
+          <h2 *ngFor="let element of qrResultString">Pasillo: <i ion-text>{{element.pasillo | json}}</i></h2>
+          <h2 *ngFor="let element of qrResultString">Rack: <i ion-text>{{element.rack | json}}</i></h2>
+          <h2 *ngFor="let element of qrResultString">Nivel: <i ion-text>{{element.nivel | json}}</i></h2>
+        </ion-card-content>
+      </ion-card>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <h2 style="text-align: center; font-size-adjust: inherit"><b>Datos Adicionales</b></h2>
+        </ion-card-header>
+        <ion-card-content>
+          <h2 *ngFor="let element of qrResultString">Proveedor: <i ion-text>{{element.provedor | json}}</i></h2>
+          <h2 *ngFor="let element of qrResultString">Fecha de Recepción: <i ion-text>{{element.created_at | json}}</i></h2>
+        </ion-card-content>
+      </ion-card>
+      <br>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button (click)="scanCode()" round icon-start color="secondary">
+    <ion-icon name="qr-scanner"></ion-icon>
+    Escanear Codigo
+  </button>
+</ion-content>

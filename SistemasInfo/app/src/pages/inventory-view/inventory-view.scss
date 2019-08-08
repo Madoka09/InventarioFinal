@@ -1,0 +1,48 @@
+page-home {
+
+  button {
+    align-items: baseline;
+  }
+
+  .custom-bg{
+    background-image: url('../assets/imgs/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+}
+
+
+button[ion-fab] {
+  overflow: visible;
+  position: relative;
+
+  ion-label {
+    position: absolute;
+    top: -8px;
+    right: 40px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    line-height: 24px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .fab {
+    contain: layout;
+  }
+}
+
+.fab {
+  contain: layout;
+}
+
+expandable {
+  ion-scroll {
+    white-space: nowrap;
+    height: 8vh;
+  }
+}
+

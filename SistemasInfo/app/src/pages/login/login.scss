@@ -1,0 +1,69 @@
+page-login {
+    ion-grid {
+        padding: 0 !important;
+        ion-row {
+          padding: 0 !important;
+          ion-col {
+            padding: 0 !important;
+    
+            ion-card {
+              padding: 0 !important;
+              ion-card-header {
+                margin-top: 1px !important;
+                margin-bottom: 1px !important;
+              }
+              ion-card-content {
+                margin-inside: 1px !important;
+    
+                padding: 0 !important;
+    
+                ion-list {
+                  margin-inside: 1px !important;
+                  padding: 0 !important;
+    
+                  ion-item {
+                    margin-inside: 1px !important;
+                    padding: 0 !important;
+    
+                    ion-row {
+                      ion-col {
+                        p {
+                          color: color($colors, secondary, base) !important;
+                          font-size: small !important;
+                        }
+                        color: color($colors, secondary, base) !important;
+                        font-size: small !important;
+    
+                      }
+    
+                    }
+    
+                  }
+    
+                }
+    
+              }
+            }
+          }
+        }
+      }
+    
+    
+    
+    
+    
+    .background-image{
+        background-image: url('../assets/imgs/bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .item-md {
+        background: transparent;
+    }
+
+    .custom-card {
+        background:rgba(255,255,255,0.95);
+    }
+}
